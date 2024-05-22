@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - attrs >=19.2
     - certifi
     - jsonschema >=3.0
@@ -33,13 +33,13 @@ test:
     - pytest_check >=1.1.2
     - pytest-ordering
     - pytest-timeout
-    - sphinx
+    - sphinx == 7.1.2
     - dictdiffer
-    - stdio-mgr
+    - stdio-mgr >= 1.0.1
   imports:
     - sphobjinv
   source_files:
-    - README.rst
+    - README.md
     - tox.ini
     - requirements-dev.txt
     - conftest.py
