@@ -1,13 +1,14 @@
 {% set name = "sphobjinv" %}
-{% set version = "2.3.1.1" %}
+{% set version = "2.3.1.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 47c603fefd3150fd594b3c68feabfaa1d28f4a67b703494154cac8a7447aa483
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1c874a368460851352d45c92afa172b5c42653b47e2e70d78d61dac93308aa9d
 
 build:
   noarch: python
@@ -18,20 +19,21 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools >=61.2
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - attrs >=19.2
     - certifi
     - jsonschema >=3.0
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - pytest_check >=1.1.2
-    - pytest-ordering
     - pytest-timeout
     - sphinx == 7.1.2
     - dictdiffer
