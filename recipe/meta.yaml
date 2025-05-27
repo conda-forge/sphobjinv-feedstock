@@ -34,6 +34,7 @@ test:
     - pip
     - pytest
     - pytest_check >=1.1.2
+    - pytest-retry
     - pytest-timeout
     - sphinx == 7.1.2
     - dictdiffer
