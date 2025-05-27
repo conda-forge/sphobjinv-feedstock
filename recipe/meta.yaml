@@ -36,9 +36,9 @@ test:
     - pytest_check >=1.1.2
     - pytest-retry
     - pytest-timeout
-    - sphinx == 7.1.2
+    - sphinx ==7.4.7
     - dictdiffer
-    - stdio-mgr >= 1.0.1
+    - stdio-mgr >=1.0.1
   imports:
     - sphobjinv
   source_files:
