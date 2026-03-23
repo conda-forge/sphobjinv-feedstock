@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sphobjinv
-  version: '2.3.1.3'
+  version: "2.4"
   python_min: '3.9'
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: a1d51e4cf3d968b9e0d3ed1cbccea0071e5e5795f24a2d7401a4e37d6bd75717
+  sha256: 44d57e7e87e17d8c7b053c853dcc36f80cbf7d1fc152d57634fd7bcae38ca48a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
